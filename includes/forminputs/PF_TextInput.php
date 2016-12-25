@@ -144,6 +144,15 @@ class PFTextInput extends PFFormInput {
 	}
 
 	public static function uploadableHTML( $input_id, $delimiter = null, $default_filename = null, $cur_value = '', $other_args = array() ) {
+		global $wgPageFormsSimpleUpload;
+		if ($wgPageFormsSimpleUpload) {
+			$text = <<<END
+<input type="button" class="simpleupload_btn" data-id="$input_id" value="Upload Image" />
+<input type="button" class="simpleupload_rmv_btn" data-id="$input_id" value="Remove" style="display:none;" />
+<input type="file" class="simpleupload" data-id="$input_id" style="display:none;">
+END;
+			return $text;
+		}
 		$upload_window_page = SpecialPageFactory::getPage( 'UploadWindow' );
 		$query_string = "pfInputID=$input_id";
 		if ( $delimiter != null ) {

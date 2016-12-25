@@ -372,6 +372,11 @@ $GLOBALS['wgResourceModules'] += array(
 		),
 		'styles' => 'skins/jquery.rateyo.css',
 	),
+	'ext.pageforms.simpleupload' => $wgPageFormsResourceTemplate + array(
+		'scripts' => array(
+			'libs/PF_simpleupload.js'
+		),
+	),
 	'ext.pageforms.select2' => $wgPageFormsResourceTemplate + array(
 		'scripts' => array(
 			'libs/select2.js',

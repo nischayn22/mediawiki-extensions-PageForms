@@ -296,6 +296,11 @@
 			],
 			"styles": "skins/jquery.rateyo.css"
 		},
+		"ext.pageforms.simpleupload": {
+			"scripts": [
+				"libs/PF_simpleupload.js"
+			]
+		},
 		"ext.pageforms.select2": {
 			"scripts": [
 				"libs/select2.js",

@@ -200,7 +200,8 @@ END;
 			'ext.pageforms.autogrow',
 			'ext.pageforms.checkboxes',
 			'ext.pageforms.select2',
-			'ext.pageforms.rating'
+			'ext.pageforms.rating',
+			'ext.pageforms.simpleupload'
 		);
 
 		$output->addModules( $mainModules );
